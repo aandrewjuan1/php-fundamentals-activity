@@ -23,7 +23,7 @@
 session_start();
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['username']) && !empty($_POST['password'])) {
     if (isset($_SESSION['username'])) {
-        echo "<p>" .$_SESSION['username'] . "is already logged in. Wait for him to logout first</p>";
+        echo "<p>" .$_SESSION['username'] . " is already logged in. Wait for him to logout first</p>";
     } else {
         $_SESSION['username'] = $_POST['username'];
         $_SESSION['password'] = md5($_POST['password']);
